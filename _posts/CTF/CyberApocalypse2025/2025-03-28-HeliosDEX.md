@@ -11,21 +11,21 @@ categories: CTF/CyberApocalypse2025
 
 The challenge environment exposes a blockchain node at an IP/port pair, but offers little direct guidance on how to connect.
  
-![HTB](HTB.png)
+![HTB](https://raw.githubusercontent.com/gnarizard/cyberjutsu/refs/heads/master/_posts/CTF/CyberApocalypse2025/HTB.png)
 
 One approach is to verify the node’s availability by using netcat (or another banner‑grabbing method) to confirm that a service is listening.
 
-![NC](NC.png) 
+![NC](https://raw.githubusercontent.com/gnarizard/cyberjutsu/refs/heads/master/_posts/CTF/CyberApocalypse2025/NC.png) 
 
 After confirming the node is running, the private key provided in the challenge can be imported into a local wallet or IDE. For example, in MetaMask, select **Import account**, then paste in the provided private key. 
 
-![Add Account](AddAccount.png)
+![Add Account](https://raw.githubusercontent.com/gnarizard/cyberjutsu/refs/heads/master/_posts/CTF/CyberApocalypse2025/AddAccount.png)
 
 Next, add a **Custom RPC Network** in MetaMask (or an equivalent setting in Remix), specifying the challenge’s IP address and port as the **RPC URL**, along with the given chain ID and a suitable network name (such as “HTB-CTF”). 
 
-![Add Network](AddNetwork.png) 
+![Add Network](https://raw.githubusercontent.com/gnarizard/cyberjutsu/refs/heads/master/_posts/CTF/CyberApocalypse2025/AddNetwork.png) 
 
-![Custom RPC](CustomRPC.png) 
+![Custom RPC](https://raw.githubusercontent.com/gnarizard/cyberjutsu/refs/heads/master/_posts/CTF/CyberApocalypse2025/CustomRPC.png) 
 
 The screenshots (shown previously) illustrate how to input the network name, RPC URL, chain ID, and currency symbol in MetaMask. Once saved, the wallet will display the account’s balance and allow contract interactions on the custom chain.
 
