@@ -1,7 +1,7 @@
 # Site settings
 title: Cyberjutsu
 baseurl: "/cyberjutsu" # the subpath of the site
-url: "https://gnar1zard.github.io" # the base hostname & protocol 
+url: "https://gnarizard.github.io" # the base hostname & protocol 
 
 # Build settings
 markdown: kramdown
