@@ -81,7 +81,9 @@ A cybersecurity blog dedicated to sharing practical knowledge across topics like
 
 ### CTF
 
-{% assign eldoria_posts = site.posts | where: "categories", "CTF/Cyber Apocalypse CTF 2025: Tales from Eldoria" %}
+#### Cyber Apocalypse 2025: Tales from Eldoria
+
+{% assign eldoria_posts = site.posts | where: "categories", "CTF/CyberApocalypse2025" %}
 {% for post in eldoria_posts %}
 
 - [{{ post.title }}]({{ post.url | relative_url }})
