@@ -11,21 +11,21 @@ categories: CTF/CyberApocalypse2025
 
 The challenge environment exposes a blockchain node at an IP/port pair, but offers little direct guidance on how to connect.
  
-![alt text](<Screenshot 2025-03-23 180100.png>) 
+![HTB](HTB.png)
 
 One approach is to verify the node’s availability by using netcat (or another banner‑grabbing method) to confirm that a service is listening.
 
-![alt text](<Screenshot 2025-03-23 175734.png>) 
+![NC](NC.png) 
 
 After confirming the node is running, the private key provided in the challenge can be imported into a local wallet or IDE. For example, in MetaMask, select **Import account**, then paste in the provided private key. 
 
-![alt text](<Screenshot 2025-03-23 175853.png>)
+![Add Account](AddAccount.png)
 
 Next, add a **Custom RPC Network** in MetaMask (or an equivalent setting in Remix), specifying the challenge’s IP address and port as the **RPC URL**, along with the given chain ID and a suitable network name (such as “HTB-CTF”). 
 
-![alt text](<Screenshot 2025-03-23 175915.png>) 
+![Add Network](AddNetwork.png) 
 
-![alt text](<Screenshot 2025-03-23 180656.png>) 
+![Custom RPC](CustomRPC.png) 
 
 The screenshots (shown previously) illustrate how to input the network name, RPC URL, chain ID, and currency symbol in MetaMask. Once saved, the wallet will display the account’s balance and allow contract interactions on the custom chain.
 
@@ -191,4 +191,4 @@ The arithmetic vulnerability in HeliosDEX allowed for a miscalculation during to
 
 ## Source Code
 
-https://github.com/gnarizard/CyberApocalypse2025/tree/main/HeliosDex
+[https://github.com/gnarizard/CyberApocalypse2025/tree/main/HeliosDex](https://github.com/gnarizard/CyberApocalypse2025/tree/main/HeliosDex)
