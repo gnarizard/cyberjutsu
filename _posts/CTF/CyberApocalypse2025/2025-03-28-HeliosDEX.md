@@ -183,11 +183,7 @@ The process to extract a net gain of ETH from HeliosDEX using these contracts is
    Deploy the BatchExploit contract by providing the HeliosDEX address. Then, call the `deployBatch()` function with parameters such as `ethPerContract = 1,000,000 wei` and `batchSize = 10`. A total of 10 ChildExploit contracts will be deployed in a single batch, each performing the swap/refund cycle.
 
 3. **Iterative Execution:**  
-   Repeat calling `deployBatch()` with the appropriate parameters until the externally owned account receives a sufficient net gain (for example, accumulating a balance of 20 ETH). Although full automation was attempted, gas limitations necessitated manual or scripted repeated calls.
-
-## Conclusion
-
-The arithmetic vulnerability in HeliosDEX allowed for a miscalculation during token swaps and refunds, leading to a net gain of ETH on each cycle. By leveraging the ChildExploit contract to perform a single cycle and the BatchExploit contract to deploy multiple instances concurrently, it was possible to incrementally increase the ETH balance. Repeated batch deployments eventually reached the required balance, demonstrating the practical impact of the arithmetic flaw.
+   Repeat calling `deployBatch()` with the appropriate parameters until the externally owned account receives a sufficient net gain (for example, accumulating a balance of 20 ETH). Although full automation was attempted on the contract level, gas limitations necessitated manual or scripted repeated calls.
 
 ## Source Code
 
