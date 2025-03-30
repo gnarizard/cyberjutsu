@@ -88,3 +88,11 @@ A cybersecurity blog dedicated to sharing practical knowledge across topics like
 
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
+
+### General
+
+{% assign general_posts = site.posts | where: "categories", "General" %}
+{% for post in general_posts %}
+
+- [{{ post.title }}]({{ post.url | relative_url }})
+{% endfor %}
