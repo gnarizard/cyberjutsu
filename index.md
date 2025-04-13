@@ -89,10 +89,10 @@ A cybersecurity blog dedicated to sharing practical knowledge across topics like
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
 
-### General
+### Cheat Sheets
 
-{% assign general_posts = site.posts | where: "categories", "General" %}
-{% for post in general_posts %}
+{% assign cheatsheet_posts = site.posts | where: "categories", "CheatSheets" %}
+{% for post in cheatsheet_posts %}
 
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
