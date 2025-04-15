@@ -5,6 +5,34 @@ date: 2025-04-15
 categories: CheatSheets/CPTS
 ---
 
+## Table of Contents
+
+1. [Initial Enumeration](#initial-enumeration)  
+2. [LLMNR/NTB-NS Poisoning](#llmnrntb-ns-poisoning)  
+3. [Password Spraying & Password Policies](#password-spraying--password-policies)  
+4. [Enumerating Security Controls](#enumerating-security-controls)  
+5. [Credentialed Enumeration](#credentialed-enumeration)  
+6. [Enumeration by Living Off the Land](#enumeration-by-living-off-the-land)  
+7. [Additional: Basic Enumeration Commands](#additional-basic-enumeration-commands)  
+8. [Additional: Networking Commands](#additional-networking-commands)  
+9. [Additional: Quick WMI Checks](#additional-quick-wmi-checks)  
+10. [Additional: Table of Useful Net Commands](#additional-table-of-useful-net-commands)  
+11. [Transferring Files](#transferring-files)  
+12. [Kerberoasting](#kerberoasting)  
+13. [ACL Enumeration & Tactics](#acl-enumeration--tactics)  
+14. [DCSync](#dcsync)  
+15. [Privileged Access](#privileged-access)  
+16. [NoPac](#nopac)  
+17. [PrintNightmare](#printnightmare)  
+18. [PetitPotam](#petitpotam)  
+19. [Miscellaneous Misconfigurations](#miscellaneous-misconfigurations)  
+20. [Group Policy Enumeration & Attacks](#group-policy-enumeration--attacks)  
+21. [ASREPRoasting](#asreproasting)  
+22. [Trust Relationships - Child > Parent Trusts](#trust-relationships---child--parent-trusts)  
+23. [Trust Relationships - Cross-Forest](#trust-relationships---cross-forest)  
+
+---
+
 ### Initial Enumeration
 
 | **Command** | **Description** |
