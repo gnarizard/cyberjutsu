@@ -96,3 +96,11 @@ A cybersecurity blog dedicated to sharing practical knowledge across topics like
 
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
+
+#### CPTS
+
+{% assign cpts_posts = site.posts | where: "categories", "CheatSheets/CPTS" %}
+{% for post in cpts_posts %}
+
+- [{{ post.title }}]({{ post.url | relative_url }})
+{% endfor %}
