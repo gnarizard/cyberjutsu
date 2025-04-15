@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Active Directory Enumeration and Attacks"
+date: 2025-04-15
+categories: CheatSheets/CPTS
+---
+
 ### Initial Enumeration
 
 | **Command** | **Description** |
@@ -97,6 +104,10 @@ Perfect. Here's the next section, **LLMNR/NTB-NS Poisoning**, formatted in **Mar
 
 ---
 
+Here are your additional commands **merged into the Enumeration by Living Off the Land section**, using **your original wording** and **formatted in Markdown**:
+
+---
+
 ### Enumeration by Living Off the Land
 
 | **Command** | **Description** |
@@ -141,6 +152,73 @@ Perfect. Here's the next section, **LLMNR/NTB-NS Poisoning**, formatted in **Mar
 | `Get-DomainGroupMember -Identity "Domain Admins" -Recurse` | PowerView script used to list all the members of a target group ("Domain Admins") through the use of the recurse option (-Recurse). Performed from a Windows-based host. |
 | `Get-DomainUser -SPN -Properties samaccountname,ServicePrincipalName` | PowerView script used to find users on the target Windows domain that have the Service Principal Name set. Performed from a Windows-based host. |
 | `.\Snaffler.exe -d INLANEFREIGHT.LOCAL -s -v data` | Runs a tool called Snaffler against a target Windows domain that finds various kinds of data in shares that the compromised account has access to. Performed from a Windows-based host. |
+
+---
+
+#### Additional: Basic Enumeration Commands
+
+| **Command** | **Result** |
+|---|---|
+| `hostname` | Prints the PC's Name |
+| `[System.Environment]::OSVersion.Version` | Prints out the OS version and revision level |
+| `wmic qfe get Caption,Description,HotFixID,InstalledOn` | Prints the patches and hotfixes applied to the host |
+| `ipconfig /all` | Prints out network adapter state and configurations |
+| `set` | Displays a list of environment variables for the current session (ran from CMD-prompt) |
+| `echo %USERDOMAIN%` | Displays the domain name to which the host belongs (ran from CMD-prompt) |
+| `echo %logonserver%` | Prints out the name of the Domain controller the host checks in with (ran from CMD-prompt) |
+
+---
+
+#### Additional: Networking Commands
+
+| **Command** | **Description** |
+|---|---|
+| `arp -a` | Lists all known hosts stored in the arp table. |
+| `ipconfig /all` | Prints out adapter settings for the host. We can figure out the network segment from here. |
+| `route print` | Displays the routing table (IPv4 & IPv6) identifying known networks and layer three routes shared with the host. |
+| `netsh advfirewall show allprofiles` | Displays the status of the host's firewall. We can determine if it is active and filtering traffic. |
+
+---
+
+#### Additional: Quick WMI Checks
+
+| **Command** | **Description** |
+|---|---|
+| `wmic qfe get Caption,Description,HotFixID,InstalledOn` | Prints the patch level and description of the Hotfixes applied |
+| `wmic computersystem get Name,Domain,Manufacturer,Model,Username,Roles /format:List` | Displays basic host information to include any attributes within the list |
+| `wmic process list /format:list` | A listing of all processes on host |
+| `wmic ntdomain list /format:list` | Displays information about the Domain and Domain Controllers |
+| `wmic useraccount list /format:list` | Displays information about all local accounts and any domain accounts that have logged into the device |
+| `wmic group list /format:list` | Information about all local groups |
+| `wmic sysaccount list /format:list` | Dumps information about any system accounts that are being used as service accounts. |
+
+---
+
+#### Additional: Table of Useful Net Commands
+
+| **Command** | **Description** |
+|---|---|
+| `net accounts` | Information about password requirements |
+| `net accounts /domain` | Password and lockout policy |
+| `net group /domain` | Information about domain groups |
+| `net group "Domain Admins" /domain` | List users with domain admin privileges |
+| `net group "domain computers" /domain` | List of PCs connected to the domain |
+| `net group "Domain Controllers" /domain` | List PC accounts of domains controllers |
+| `net group <domain_group_name> /domain` | User that belongs to the group |
+| `net groups /domain` | List of domain groups |
+| `net localgroup` | All available groups |
+| `net localgroup administrators /domain` | List users that belong to the administrators group inside the domain (the group Domain Admins is included here by default) |
+| `net localgroup Administrators` | Information about a group (admins) |
+| `net localgroup administrators [username] /add` | Add user to administrators |
+| `net share` | Check current shares |
+| `net user <ACCOUNT_NAME> /domain` | Get information about a user within the domain |
+| `net user /domain` | List all users of the domain |
+| `net user %username%` | Information about the current user |
+| `net use x: \\computer\share` | Mount the share locally |
+| `net view` | Get a list of computers |
+| `net view /all /domain[:domainname]` | Shares on the domains |
+| `net view \\computer /ALL` | List shares of a computer |
+| `net view /domain` | List of PCs of the domain |
 
 ---
 
