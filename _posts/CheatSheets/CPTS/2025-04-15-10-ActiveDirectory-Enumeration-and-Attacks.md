@@ -21,8 +21,6 @@ categories: CheatSheets/CPTS
 | `sudo mv kerbrute_linux_amd64 /usr/local/bin/kerbrute` | Used to move the Kerbrute binary to a directory can be set to be in a Linux user's path. Making it easier to use the tool. |
 | `./kerbrute_linux_amd64 userenum -d INLANEFREIGHT.LOCAL --dc 172.16.5.5 jsmith.txt -o kerb-results` | Runs the Kerbrute tool to discover usernames in the domain (INLANEFREIGHT.LOCAL) specified proceeding the -d option and the associated domain controller specified proceeding --dcusing a wordlist and outputs (-o) the results to a specified file. Performed from a Linux-based host. |
 
-Perfect. Here's the next section, **LLMNR/NTB-NS Poisoning**, formatted in **Markdown** exactly as requested — same original wording, no changes:
-
 ---
 
 ### LLMNR/NTB-NS Poisoning
@@ -100,10 +98,6 @@ Perfect. Here's the next section, **LLMNR/NTB-NS Poisoning**, formatted in **Mar
 | `python3 windapsearch.py --dc-ip 172.16.5.5 -u inlanefreight\wley -p transporter@4 --da` | Used to enumerate the domain admins group (--da) using a valid set of credentials on a target Windows domain. Performed from a Linux-based host. |
 | `python3 windapsearch.py --dc-ip 172.16.5.5 -u inlanefreight\wley -p transporter@4 -PU` | Used to perform a recursive search (-PU) for users with nested permissions using valid credentials. Performed from a Linux-based host. |
 | `sudo bloodhound-python -u 'forend' -p 'Klmcargo2' -ns 172.16.5.5 -d inlanefreight.local -c all` | Executes the python implementation of BloodHound (bloodhound.py) with valid credentials and specifies a name server (-ns) and target Windows domain (inlanefreight.local) as well as runs all checks (-c all). Runs using valid credentials. Performed from a Linux-based host. |
-
----
-
-Here are your additional commands **merged into the Enumeration by Living Off the Land section**, using **your original wording** and **formatted in Markdown**:
 
 ---
 
