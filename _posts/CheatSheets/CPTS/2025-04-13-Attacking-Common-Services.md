@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Attacking Common Services"
+date: 2025-04-13
+categories: CheatSheets/CPTS
+---
+
 ## Attacking FTP
 
 |**Command**|**Description**|
