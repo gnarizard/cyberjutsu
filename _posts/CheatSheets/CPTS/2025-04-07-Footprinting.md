@@ -3,6 +3,7 @@ layout: post
 title: "Footprinting"
 date: 2025-04-15
 categories: CheatSheets/CPTS
+order: 2
 ---
 
 ### Infrastructure-based Enumeration

@@ -3,6 +3,7 @@ layout: post
 title: "Shells and Payloads"
 date: 2025-04-15
 categories: CheatSheets/CPTS
+order: 4
 ---
 
 ### Post-Exploitation & Shell Access
