@@ -2,7 +2,7 @@
 layout: post
 title: "Comprehensive Linux Command Guide"
 date: 2024-04-28
-categories: Sys-Admin
+categories: CheatSheets
 ---
 
 ## Table of Contents
