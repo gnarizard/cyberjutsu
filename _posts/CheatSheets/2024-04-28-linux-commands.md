@@ -5,6 +5,7 @@ date: 2024-04-28
 categories: CheatSheets
 ---
 
+
 ## Table of Contents
 
 1. [Introduction to Linux Commands](#introduction-to-linux-commands)
@@ -56,17 +57,17 @@ categories: CheatSheets
     2. [Redirections in Commands](#redirections-in-commands)
     3. [Advanced Command Chaining](#advanced-command-chaining)
         1. [Using Bash History and Shortcuts](#using-bash-history-and-shortcuts)
-7. [Using `man` Pages and `--help` for Command Documentation](#using-man-pages-and---help-for-command-documentation)
+7. [Using `man` Pages and `--help` for Command Documentation](#using-man-pages-and-help-for-command-documentation)
     1. [The `man` Command](#the-man-command)
         1. [Basic Usage](#basic-usage)
         2. [Example](#example)
         3. [Navigating `man` Pages](#navigating-man-pages)
-    2. [The `--help` Option](#the---help-option)
+    2. [The `--help` Option](#the-help-option)
         1. [Basic Usage](#basic-usage-1)
         2. [Example](#example-1)
-    3. [Examples of Using `man` and `--help`](#examples-of-using-man-and---help)
+    3. [Examples of Using `man` and `--help`](#examples-of-using-man-and-help)
         1. [Using `man` to Learn About `grep`](#using-man-to-learn-about-grep)
-        2. [Using `--help` to Quickly Reference `tar` Options](#using---help-to-quickly-reference-tar-options)
+        2. [Using `--help` to Quickly Reference `tar` Options](#using-help-to-quickly-reference-tar-options)
     4. [Practical Tips](#practical-tips)
         1. [Combine `man` with `grep`](#combine-man-with-grep)
         2. [Print a Section of the Manual Page](#print-a-section-of-the-manual-page)
