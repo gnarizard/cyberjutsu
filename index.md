@@ -99,7 +99,7 @@ A cybersecurity blog dedicated to sharing practical knowledge across topics like
 
 #### CPTS
 
-{% assign cpts_posts = site.posts | where: "categories", "CheatSheets/CPTS" %}
+{% assign cpts_posts = site.posts | where: "categories", "CheatSheets/CPTS" | sort: "order" %}
 {% for post in cpts_posts %}
 
 - [{{ post.title }}]({{ post.url | relative_url }})
