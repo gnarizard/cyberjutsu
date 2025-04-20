@@ -37,3 +37,4 @@ order: 11
 | `sudo sh -c 'echo "SERVER_IP  academy.htb" >> /etc/hosts'` | Add DNS entry |
 | `for i in $(seq 1 1000); do echo $i >> ids.txt; done` | Create Sequence Wordlist |
 | `curl http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=key' -H 'Content-Type: application/x-www-form-urlencoded'` | curl w/ POST |
+| `split -n l/4 biglist.txt chunk_` | Split wordlist into 4 chunks for parallel ffuf |
