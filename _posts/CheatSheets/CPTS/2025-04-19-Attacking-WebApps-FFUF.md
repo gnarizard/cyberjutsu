@@ -21,6 +21,8 @@ order: 11
 | `ffuf -w wordlist.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx` | Parameter Fuzzing - POST |
 | `ffuf -w ids.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=FUZZ' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx` | Value Fuzzing |  
 
+---
+
 # Wordlists
 
 | **Command**   | **Description**   |
@@ -30,6 +32,8 @@ order: 11
 | `/opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt` | Domain Wordlist |
 | `/opt/useful/SecLists/Discovery/Web-Content/burp-parameter-names.txt` | Parameters Wordlist |
 
+---
+
 # Misc
 
 | **Command**   | **Description**   |
@@ -38,3 +42,6 @@ order: 11
 | `for i in $(seq 1 1000); do echo $i >> ids.txt; done` | Create Sequence Wordlist |
 | `curl http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'id=key' -H 'Content-Type: application/x-www-form-urlencoded'` | curl w/ POST |
 | `split -n l/4 biglist.txt chunk_` | Split wordlist into 4 chunks for parallel ffuf |
+| `jq -s 'map(.results) \| add' out\*.json > all-results.json`    | Combine multiple ffuf JSON output files                   |
+
+---
