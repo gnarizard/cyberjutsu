@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Active Directory Enumeration and Attacks"
+title: "Attacking Web Applications with Ffuf"
 date: 2025-04-15
 categories: CheatSheets/CPTS
 order: 11
