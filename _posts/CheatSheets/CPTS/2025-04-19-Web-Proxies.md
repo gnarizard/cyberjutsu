@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Active Directory Enumeration and Attacks"
+title: "Using Web Proxies"
 date: 2025-04-19
 categories: CheatSheets/CPTS
 order: 10
