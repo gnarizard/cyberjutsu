@@ -11,7 +11,7 @@ order: 13
 | **Command**   | **Description**   |
 | --------------|-------------------|
 | **General** |
-| `mysql -u root -h docker.hackthebox.eu -P 3306 -p` | login to mysql database |
+| `mysql -u root -h docker.hackthebox.eu -P 3306 -p<password>` | login to mysql database (there shouldn't be any spaces between '-p' and the password). |
 | `SHOW DATABASES` | List available databases |
 | `USE users` | Switch to database |
 | **Tables** |
