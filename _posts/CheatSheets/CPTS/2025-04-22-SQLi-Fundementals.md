@@ -37,6 +37,7 @@ order: 13
 | `SELECT * FROM logins LIMIT 1, 2` | Only show first two results starting from index 2 |
 | `SELECT * FROM table_name WHERE <condition>` | List results that meet a condition |
 | `SELECT * FROM logins WHERE username LIKE 'admin%'` | List results where the name is similar to a given string |
+| `SELECT * FROM ports UNION SELECT * FROM ships;` | Combine results from both tables |
 
 ## MySQL Operator Precedence
 
