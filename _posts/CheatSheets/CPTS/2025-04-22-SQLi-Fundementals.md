@@ -51,10 +51,6 @@ order: 13
 
 ## SQL Injection
 
-Here’s the same content with properly formatted Markdown tables:
-
----
-
 ## Auth Bypass
 
 | **Payload**              | **Description**                      |
