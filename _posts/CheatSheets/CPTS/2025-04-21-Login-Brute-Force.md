@@ -39,6 +39,7 @@ hydra [-l LOGIN|-L FILE] [-p PASS|-P FILE] [-C FILE] -m MODULE [service://server
 | ftp           | File Transfer Protocol | Used to brute-force login credentials for FTP services, commonly used to transfer files over a network. | `hydra -l admin -P /path/to/password_list.txt ftp://192.168.1.100` |
 | ssh           | Secure Shell (SSH)     | Targets SSH services to brute-force credentials, commonly used for secure remote login to systems. | `hydra -l root -P /path/to/password_list.txt ssh://192.168.1.100` |
 | http-get/post | HTTP Web Services      | Used to brute-force login credentials for HTTP web login forms using either GET or POST requests. | `hydra -l admin -P /path/to/password_list.txt -f -s <port> <target IP> http-post-form "/login.php:user=^USER^&pass=^PASS^:F=incorrect"` |
+| http-get (Basic Auth) | HTTP Basic Authentication | Used to brute-force credentials on services protected with HTTP Basic Auth (not web forms). | `hydra -L users.txt -P passwords.txt -s <port> <target IP> http-get /` |
 
 ---
 
