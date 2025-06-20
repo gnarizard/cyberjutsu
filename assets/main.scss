@@ -1,11 +1,11 @@
 ---
 ---
 
-@import "minima";   // pull in theme defaults
+@import "minima";           /* pull in the theme’s CSS */
 
-/* your background tweak */
+/* add your override AFTER the import so it wins */
 body {
-  background: url("{{ '/assets/img/background.jpg' | relative_url }}")
+  background: url("../img/background.jpg")  /* relative path works everywhere */
               no-repeat center center fixed;
   background-size: cover;
 }
