@@ -1,9 +1,9 @@
 ---
 ---
 
-@import "minima";          // pull in the theme’s default styles
+@import "minima";   // pull in theme defaults
 
-/* put your tweaks **after** the import so they win the cascade */
+/* your background tweak */
 body {
   background: url("{{ '/assets/img/background.jpg' | relative_url }}")
               no-repeat center center fixed;
