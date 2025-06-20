@@ -1,6 +1,0 @@
-/* Full-page background */
-body {
-  /* ".." walks from /assets/css/ → /assets/img/  */
-  background: url("../img/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-}

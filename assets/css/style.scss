@@ -1,0 +1,11 @@
+---
+---
+
+@import "minima";          // pull in the theme’s default styles
+
+/* put your tweaks **after** the import so they win the cascade */
+body {
+  background: url("{{ '/assets/img/background.jpg' | relative_url }}")
+              no-repeat center center fixed;
+  background-size: cover;
+}
