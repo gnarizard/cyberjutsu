@@ -8,10 +8,10 @@ categories: CheatSheets
 #### bloodyAD
  
 **Notes**
-    - Pass -k to use kerberos authentication
-    - You can pass a user hash instead of a password using -p :hash
-    - Specify format for ‘–password’ or ‘-k ‘ using -f, e.g. -f rc4
-    - Can be finicky and may have to update clockskew, attempt commands mult times, as well as attempt exploit chains in rapid succession
+* Pass -k to use kerberos authentication
+* You can pass a user hash instead of a password using -p :hash
+* Specify format for ‘–password’ or ‘-k ‘ using -f, e.g. -f rc4
+* Can be finicky and may have to update clockskew, attempt commands mult times, as well as attempt exploit chains in rapid succession
 
 ##### BloodHound Edges to bloodyAD Commands
 
