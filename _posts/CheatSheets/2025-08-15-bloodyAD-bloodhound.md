@@ -7,7 +7,7 @@ categories: CheatSheets
 
 #### bloodyAD
  
->notes 
+**Notes**
     - Pass -k to use kerberos authentication
     - You can pass a user hash instead of a password using -p :hash
     - Specify format for ‘–password’ or ‘-k ‘ using -f, e.g. -f rc4
