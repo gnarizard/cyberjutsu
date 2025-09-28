@@ -732,3 +732,5 @@ flameshot gui -p ./screenshots
 ```bash
 pandoc report.md -o report.pdf
 ```
+
+Big thanks to [AmrSec](https://x.com/amrelsagaei) and [NahamSec](https://x.com/NahamSec) <3
