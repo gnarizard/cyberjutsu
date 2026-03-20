@@ -21,6 +21,10 @@
     {% if page.use_ascii_sign %}
     <script src="{{ '/assets/js/dude-with-sign.js' | relative_url }}"></script>
     {% endif %}
+
+    {% if page.use_post_filter %}
+    <script src="{{ '/assets/js/posts-filter.js' | relative_url }}"></script>
+    {% endif %}
 </body>
 
 </html>
