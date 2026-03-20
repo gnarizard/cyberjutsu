@@ -8,8 +8,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #5F514E;
     font-family: Arial, Helvetica, sans-serif;
+    background:
+        linear-gradient(rgba(40, 18, 32, 0.28), rgba(40, 18, 32, 0.28)),
+        url("../images/toon-world-pink-background.png") center center / cover no-repeat fixed;
+    background-color: #5F514E;
 }
 
 header {
@@ -205,14 +208,15 @@ footer {
 .rainbow-inline-text {
     display: inline;
     background: linear-gradient(90deg,
-            #32CD32 0%,
-            #FFD700 14%,
-            #FF69B4 28%,
-            #FF6347 42%,
-            #da810e 56%,
-            #3df182 70%,
-            #87CEEB 84%,
-            #BA55D3 100%);
+            #ff5a1f 0%,
+            #ff8a1f 12%,
+            #ffbf1f 24%,
+            #e8ef1a 36%,
+            #7dff2f 48%,
+            #34f0b8 60%,
+            #32d9ff 72%,
+            #4968ff 86%,
+            #8b45ff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
