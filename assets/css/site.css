@@ -80,66 +80,115 @@ main {
     padding: 0 16px;
 }
 
-.title-book-panel {
-    width: fit-content;
-    max-width: min(100%, 620px);
-    padding: 1rem 2rem 1.1rem;
-    border-radius: 16px;
+:root {
+    --toon-green-top: #7dbb76;
+    --toon-green-mid: #63a85f;
+    --toon-green-low: #4b874b;
+    --toon-green-bottom: #376737;
+    --toon-green-border: rgba(45, 83, 43, 0.74);
+
+    --toon-purple-top: #9950b3;
+    --toon-purple-mid: #813f9b;
+    --toon-purple-low: #672c7f;
+    --toon-purple-bottom: #4e1f61;
+    --toon-purple-border: rgba(68, 21, 79, 0.74);
+}
+
+.toon-panel {
     position: relative;
     overflow: hidden;
-    background:
-        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.07), transparent 20%),
-        radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.035), transparent 18%),
-        repeating-linear-gradient(
-            0deg,
-            rgba(255, 255, 255, 0.018) 0px,
-            rgba(255, 255, 255, 0.018) 1px,
-            rgba(0, 0, 0, 0.015) 2px,
-            rgba(0, 0, 0, 0.015) 3px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.012) 0px,
-            rgba(255, 255, 255, 0.012) 1px,
-            rgba(0, 0, 0, 0.012) 2px,
-            rgba(0, 0, 0, 0.012) 3px
-        ),
-        linear-gradient(180deg, #7dbb76 0%, #63a85f 40%, #4b874b 74%, #376737 100%);
-    border: 2px solid rgba(45, 83, 43, 0.74);
+    border-radius: 16px;
     box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.16),
         inset 0 1px 0 rgba(255, 255, 255, 0.06),
         inset 0 -6px 10px rgba(0, 0, 0, 0.10);
+    background:
+        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.07), transparent 20%),
+        radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.03), transparent 18%),
+        repeating-linear-gradient(0deg,
+            rgba(255, 255, 255, 0.016) 0px,
+            rgba(255, 255, 255, 0.016) 1px,
+            rgba(0, 0, 0, 0.014) 2px,
+            rgba(0, 0, 0, 0.014) 3px),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.01) 0px,
+            rgba(255, 255, 255, 0.01) 1px,
+            rgba(0, 0, 0, 0.012) 2px,
+            rgba(0, 0, 0, 0.012) 3px);
 }
 
-.sign-book-panel {
+.toon-panel--green {
+    background-image:
+        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.07), transparent 20%),
+        radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.03), transparent 18%),
+        repeating-linear-gradient(0deg,
+            rgba(255, 255, 255, 0.016) 0px,
+            rgba(255, 255, 255, 0.016) 1px,
+            rgba(0, 0, 0, 0.014) 2px,
+            rgba(0, 0, 0, 0.014) 3px),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.01) 0px,
+            rgba(255, 255, 255, 0.01) 1px,
+            rgba(0, 0, 0, 0.012) 2px,
+            rgba(0, 0, 0, 0.012) 3px),
+        linear-gradient(180deg,
+            var(--toon-green-top) 0%,
+            var(--toon-green-mid) 42%,
+            var(--toon-green-low) 76%,
+            var(--toon-green-bottom) 100%);
+    border: 2px solid var(--toon-green-border);
+}
+
+.toon-panel--purple {
+    background-image:
+        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.07), transparent 20%),
+        radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.03), transparent 18%),
+        repeating-linear-gradient(0deg,
+            rgba(255, 255, 255, 0.016) 0px,
+            rgba(255, 255, 255, 0.016) 1px,
+            rgba(0, 0, 0, 0.014) 2px,
+            rgba(0, 0, 0, 0.014) 3px),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.01) 0px,
+            rgba(255, 255, 255, 0.01) 1px,
+            rgba(0, 0, 0, 0.012) 2px,
+            rgba(0, 0, 0, 0.012) 3px),
+        linear-gradient(180deg,
+            var(--toon-purple-top) 0%,
+            var(--toon-purple-mid) 40%,
+            var(--toon-purple-low) 74%,
+            var(--toon-purple-bottom) 100%);
+    border: 2px solid var(--toon-purple-border);
+}
+
+.toon-panel--title {
+    width: fit-content;
+    max-width: min(100%, 620px);
+    padding: 1rem 2rem 1.1rem;
+}
+
+.toon-panel--compact {
     width: fit-content;
     max-width: min(100%, 560px);
     padding: 1.2rem 1.6rem;
-    border-radius: 16px;
-    position: relative;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.08), transparent 20%),
-        radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.04), transparent 18%),
-        repeating-linear-gradient(0deg,
-            rgba(255, 255, 255, 0.02) 0px,
-            rgba(255, 255, 255, 0.02) 1px,
-            rgba(0, 0, 0, 0.015) 2px,
-            rgba(0, 0, 0, 0.015) 3px),
-        repeating-linear-gradient(90deg,
-            rgba(255, 255, 255, 0.015) 0px,
-            rgba(255, 255, 255, 0.015) 1px,
-            rgba(0, 0, 0, 0.012) 2px,
-            rgba(0, 0, 0, 0.012) 3px),
-        linear-gradient(180deg, #a65fc0 0%, #8d4cab 38%, #73348f 72%, #5b246f 100%);
-    border: 2px solid rgba(79, 28, 92, 0.72);
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.07),
-        inset 0 -6px 10px rgba(0, 0, 0, 0.10);
 }
 
+.toon-panel--content {
+    width: min(100%, 900px);
+    margin: auto;
+    padding: 1.5rem 1.75rem;
+    color: #f3e7cf;
+}
+
+.toon-panel--sidebar {
+    padding: 1rem 1rem 1.1rem;
+    color: #f3e7cf;
+}
+
+.title-book-panel,
+.sign-book-panel {
+    position: relative;
+}
 
 .rainbow-title {
     margin: 0;
