@@ -11,7 +11,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background:
         linear-gradient(rgba(40, 18, 32, 0.28), rgba(40, 18, 32, 0.28)),
-        url("../images/toon-world-pink-background.png") center center / cover no-repeat fixed;
+        url("../images/toon-pink-background-desktop.png") center center / cover no-repeat fixed;
     background-color: #5F514E;
 }
 
@@ -71,10 +71,75 @@ main {
 }
 
 .title {
+    width: 100%;
     text-align: center;
     margin-top: 10px;
     flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
 }
+
+.title-book-panel {
+    width: fit-content;
+    max-width: min(100%, 620px);
+    padding: 1rem 2rem 1.1rem;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.07), transparent 20%),
+        radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.035), transparent 18%),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.018) 0px,
+            rgba(255, 255, 255, 0.018) 1px,
+            rgba(0, 0, 0, 0.015) 2px,
+            rgba(0, 0, 0, 0.015) 3px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.012) 0px,
+            rgba(255, 255, 255, 0.012) 1px,
+            rgba(0, 0, 0, 0.012) 2px,
+            rgba(0, 0, 0, 0.012) 3px
+        ),
+        linear-gradient(180deg, #7dbb76 0%, #63a85f 40%, #4b874b 74%, #376737 100%);
+    border: 2px solid rgba(45, 83, 43, 0.74);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        inset 0 -6px 10px rgba(0, 0, 0, 0.10);
+}
+
+.sign-book-panel {
+    width: fit-content;
+    max-width: min(100%, 560px);
+    padding: 1.2rem 1.6rem;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.08), transparent 20%),
+        radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.04), transparent 18%),
+        repeating-linear-gradient(0deg,
+            rgba(255, 255, 255, 0.02) 0px,
+            rgba(255, 255, 255, 0.02) 1px,
+            rgba(0, 0, 0, 0.015) 2px,
+            rgba(0, 0, 0, 0.015) 3px),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.015) 0px,
+            rgba(255, 255, 255, 0.015) 1px,
+            rgba(0, 0, 0, 0.012) 2px,
+            rgba(0, 0, 0, 0.012) 3px),
+        linear-gradient(180deg, #a65fc0 0%, #8d4cab 38%, #73348f 72%, #5b246f 100%);
+    border: 2px solid rgba(79, 28, 92, 0.72);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        inset 0 -6px 10px rgba(0, 0, 0, 0.10);
+}
+
 
 .rainbow-title {
     margin: 0;
@@ -104,6 +169,8 @@ main {
     text-align: left;
     background: transparent;
     border: none;
+    position: relative;
+    z-index: 1;
 }
 
 .connect-with-me {
