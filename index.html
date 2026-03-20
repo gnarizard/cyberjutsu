@@ -1,44 +1,24 @@
 ---
-layout: null
+layout: site
 permalink: /
 title: Home
+use_ascii_sign: true
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberjutsu</title>
-    <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
-</head>
+<div class="title">
+    <h3 class="rainbow-title">
+        <span style="color: #32CD32;">g</span>
+        <span style="color: #FFD700;">n</span>
+        <span style="color: #FF69B4;">a</span>
+        <span style="color: #FF6347;">r</span>
+        <span style="color: #da810e;">i</span>
+        <span style="color: #FF69B4;">z</span>
+        <span style="color: #3df182;">a</span>
+        <span style="color: #87CEEB;">r</span>
+        <span style="color: #BA55D3;">d</span>
+    </h3>
+</div>
 
-<body>
-    {% include home-nav.html %}
-
-    <main>
-        <div class="title">
-            <h3 class="rainbow-title">
-                <span style="color: #32CD32;">g</span>
-                <span style="color: #FFD700;">n</span>
-                <span style="color: #FF69B4;">a</span>
-                <span style="color: #FF6347;">r</span>
-                <span style="color: #da810e;">i</span>
-                <span style="color: #FF69B4;">z</span>
-                <span style="color: #3df182;">a</span>
-                <span style="color: #87CEEB;">r</span>
-                <span style="color: #BA55D3;">d</span>
-            </h3>
-        </div>
-
-        <div class="content">
-            <pre class="ascii-art" id="ascii-art"></pre>
-        </div>
-    </main>
-
-    {% include home-footer.html %}
-
-    <script src="{{ '/assets/js/dude-with-sign.js' | relative_url }}"></script>
-</body>
-</html>
+<div class="content">
+    <pre class="ascii-art" id="ascii-art"></pre>
+</div>

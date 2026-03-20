@@ -125,3 +125,21 @@ footer {
         padding-top: 14px;
     }
 }
+
+.about-panel {
+    max-width: 760px;
+    margin: auto;
+    padding: 1.5rem 1.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    color: #f3e7cf;
+}
+
+.about-panel p {
+    margin: 0 0 1rem;
+    line-height: 1.75;
+}
+
+.about-panel p:last-child {
+    margin-bottom: 0;
+}
