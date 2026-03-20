@@ -1,9 +1,9 @@
 const postsSearch = document.getElementById("posts-search");
-const postsList = document.getElementById("posts-list");
 const emptyState = document.getElementById("posts-empty-state");
 
-if (postsSearch && postsList) {
-    const cards = Array.from(postsList.querySelectorAll(".post-card"));
+if (postsSearch) {
+    const cards = Array.from(document.querySelectorAll(".post-card"));
+    const sections = Array.from(document.querySelectorAll(".posts-section"));
 
     function filterPosts() {
         const query = postsSearch.value.trim().toLowerCase();
@@ -15,6 +15,11 @@ if (postsSearch && postsList) {
 
             card.hidden = !matches;
             if (matches) visibleCount += 1;
+        });
+
+        sections.forEach((section) => {
+            const visibleCards = section.querySelectorAll(".post-card:not([hidden])");
+            section.hidden = visibleCards.length === 0;
         });
 
         if (emptyState) {
