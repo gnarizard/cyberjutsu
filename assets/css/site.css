@@ -193,3 +193,55 @@ footer {
     background-clip: text;
     color: transparent;
 }
+
+.posts-panel {
+    width: min(100%, 900px);
+    margin: auto;
+    padding: 1.5rem 1.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    color: #f3e7cf;
+}
+
+.posts-title {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.75rem, 1.2vw + 1.2rem, 2.4rem);
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.post-card {
+    padding: 1rem 1.25rem;
+    background: rgba(0, 0, 0, 0.12);
+    border-left: 4px solid #FFD700;
+    border-radius: 10px;
+}
+
+.post-card-title {
+    margin: 0 0 0.35rem;
+    font-size: clamp(1.1rem, 0.6vw + 1rem, 1.4rem);
+}
+
+.post-card-title a {
+    color: #f3e7cf;
+    text-decoration: none;
+}
+
+.post-card-title a:hover {
+    color: #FFD700;
+}
+
+.post-meta {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+    color: rgba(243, 231, 207, 0.78);
+}
+
+.post-excerpt {
+    margin: 0;
+    line-height: 1.7;
+}
