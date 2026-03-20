@@ -6,13 +6,6 @@ categories:
 excerpt: "Walkthrough and notes for HeliosDEX Cyber Apocalypse CTF 2025: Tales from Eldoria."
 ---
 
----
-layout: post
-title: "HeliosDEX"
-date: 2025-03-28
-categories: CTF/CyberApocalypse2025
----
-
 # Exploiting an Arithmetic Vulnerability in HeliosDEX
 
 ## Establishing a Connection with the Provided RPC
