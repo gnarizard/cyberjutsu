@@ -1,1 +1,4 @@
-<span class="{{ include.class | default: 'rainbow-inline-text' }}">{{ include.text }}</span>
+<span class="rainbow-text">{%- assign chars = include.text | split: '' -%}{%- for char in chars -%}{%- if char == ' '
+    -%}<span class="rainbow-space"> </span>{%- else -%}<span
+        class="rainbow-char rainbow-{{ forloop.index0 | modulo: 9 }}">{{ char }}</span>{%- endif -%}{%- endfor
+    -%}</span>

@@ -268,66 +268,91 @@ footer {
 }
 
 .rainbow-text {
-    display: inline-block;
+    display: inline;
     letter-spacing: 0;
+    white-space: normal;
 }
 
 .rainbow-char {
-    display: inline-block;
+    display: inline;
+}
+
+.rainbow-space {
+    display: inline;
+    white-space: pre;
 }
 
 .rainbow-0 {
-    color: #32CD32;
+    color: #ff2b2b;
 }
 
+/* red */
 .rainbow-1 {
-    color: #FFD700;
+    color: #ff8a00;
 }
 
+/* orange */
 .rainbow-2 {
-    color: #FF69B4;
+    color: #ffe600;
 }
 
+/* yellow */
 .rainbow-3 {
-    color: #FF6347;
+    color: #7dff2f;
 }
 
+/* light green */
 .rainbow-4 {
-    color: #da810e;
+    color: #15c95a;
 }
 
+/* darker green */
 .rainbow-5 {
-    color: #FF69B4;
+    color: #35e4ff;
 }
 
+/* light blue */
 .rainbow-6 {
-    color: #3df182;
+    color: #2a5cff;
 }
 
+/* blue */
 .rainbow-7 {
-    color: #87CEEB;
+    color: #6a35ff;
 }
 
+/* purple */
 .rainbow-8 {
-    color: #BA55D3;
+    color: #d94cff;
 }
 
-.rainbow-inline-text {
+/* purple-pink */
+
+/* .rainbow-inline-text {
     display: inline;
     background: linear-gradient(90deg,
-            #ff5a1f 0%,
-            #ff8a1f 12%,
-            #ffbf1f 24%,
-            #e8ef1a 36%,
-            #7dff2f 48%,
-            #34f0b8 60%,
-            #32d9ff 72%,
-            #4968ff 86%,
-            #8b45ff 100%);
+            #ff2b2b 0%,
+            #ff2b2b 11%,
+            #ff8a00 11%,
+            #ff8a00 22%,
+            #ffe600 22%,
+            #ffe600 33%,
+            #7dff2f 33%,
+            #7dff2f 44%,
+            #15c95a 44%,
+            #15c95a 55%,
+            #35e4ff 55%,
+            #35e4ff 66%,
+            #2a5cff 66%,
+            #2a5cff 77%,
+            #5a2cff 77%,
+            #5a2cff 88%,
+            #d94cff 88%,
+            #d94cff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
+} */
 
 
 .posts-list {
