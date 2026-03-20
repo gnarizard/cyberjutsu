@@ -40,10 +40,23 @@ header {
     text-decoration: none;
     font-size: clamp(0.95rem, 0.8vw + 0.7rem, 1.15rem);
     font-weight: 700;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .top-nav a:hover {
+    transform: translateY(-1px);
+}
+
+.top-nav a:nth-child(1):hover {
+    color: #32CD32;
+}
+
+.top-nav a:nth-child(2):hover {
     color: #FFD700;
+}
+
+.top-nav a:nth-child(3):hover {
+    color: #FF69B4;
 }
 
 main {
