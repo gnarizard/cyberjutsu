@@ -4,7 +4,7 @@ title: About
 layout: site
 ---
 
-<div class="about-panel">
+<div class="about-panel toon-panel toon-panel--purple toon-panel--content">
   <p>
     Welcome to {% include rainbow-inline-text.html text="Cyberjutsu" %}. This site is dedicated to sharing practical knowledge across topics like {% include rainbow-inline-text.html text="red teaming" %}, {% include rainbow-inline-text.html text="threat hunting" %}, and {% include rainbow-inline-text.html text="security research" %}.
   </p>

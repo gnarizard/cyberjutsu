@@ -5,7 +5,7 @@ layout: site
 use_post_filter: true
 ---
 
-<div class="posts-panel">
+<div class="posts-panel toon-panel toon-panel--purple toon-panel--content">
   <div class="posts-search-wrap">
     <input
       id="posts-search"
