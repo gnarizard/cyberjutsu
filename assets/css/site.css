@@ -203,11 +203,6 @@ footer {
     color: #f3e7cf;
 }
 
-.posts-title {
-    margin: 0 0 1.25rem;
-    font-size: clamp(1.75rem, 1.2vw + 1.2rem, 2.4rem);
-}
-
 .posts-list {
     display: flex;
     flex-direction: column;
@@ -219,20 +214,37 @@ footer {
     background: rgba(0, 0, 0, 0.12);
     border-left: 4px solid #FFD700;
     border-radius: 10px;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
+
+.post-card:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.16);
+}
+
+.post-card:nth-child(9n+1) { border-left-color: #32CD32; }
+.post-card:nth-child(9n+2) { border-left-color: #FFD700; }
+.post-card:nth-child(9n+3) { border-left-color: #FF69B4; }
+.post-card:nth-child(9n+4) { border-left-color: #FF6347; }
+.post-card:nth-child(9n+5) { border-left-color: #da810e; }
+.post-card:nth-child(9n+6) { border-left-color: #FF69B4; }
+.post-card:nth-child(9n+7) { border-left-color: #3df182; }
+.post-card:nth-child(9n+8) { border-left-color: #87CEEB; }
+.post-card:nth-child(9n+9) { border-left-color: #BA55D3; }
 
 .post-card-title {
     margin: 0 0 0.35rem;
     font-size: clamp(1.1rem, 0.6vw + 1rem, 1.4rem);
+    line-height: 1.25;
 }
 
-.post-card-title a {
-    color: #f3e7cf;
+.post-card-link {
     text-decoration: none;
+    font-weight: 700;
 }
 
-.post-card-title a:hover {
-    color: #FFD700;
+.post-card-link:hover {
+    filter: brightness(1.08);
 }
 
 .post-meta {

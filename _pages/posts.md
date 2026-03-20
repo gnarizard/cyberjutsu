@@ -5,13 +5,11 @@ layout: site
 ---
 
 <div class="posts-panel">
-  <h1 class="posts-title">Posts</h1>
-
   <div class="posts-list">
     {% for post in site.posts %}
       <article class="post-card">
         <h2 class="post-card-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a class="rainbow-inline-text post-card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h2>
 
         <p class="post-meta">
