@@ -23,9 +23,10 @@ use_post_filter: true
         data-search="{{ post.title | downcase | escape }} {{ post.excerpt | strip_html | strip_newlines | downcase | escape }} {{ post.categories | join: ' ' | downcase | escape }}"
       >
         <h2 class="post-card-title">
-          <a class="rainbow-inline-text post-card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a class="post-card-link" href="{{ post.url | relative_url }}">
+            {% include rainbow-inline-text.html text=post.title %}
+          </a>
         </h2>
-
         <p class="post-meta">
           {{ post.date | date: "%B %-d, %Y" }}
           {% if post.categories and post.categories.size > 0 %}
