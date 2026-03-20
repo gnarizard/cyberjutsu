@@ -12,7 +12,8 @@ if (asciiTarget) {
         "Knock Knock Neo",
         "admin:admin",
         "user:user",
-        "Root and Scoot"
+        "Root and Scoot",
+        "Toon World"
     ];
 
     function spaces(n) {

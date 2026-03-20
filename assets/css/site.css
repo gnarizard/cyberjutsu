@@ -479,13 +479,13 @@ footer {
 
 
 .post-page-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .post-page-title {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.2rem;
     font-size: clamp(1.8rem, 1.4vw + 1.2rem, 2.6rem);
-    line-height: 1.15;
+    line-height: 1.1;
 }
 
 .post-page-meta {
@@ -495,22 +495,26 @@ footer {
 }
 
 .post-page-content {
-    line-height: 1.8;
+    line-height: 1.7;
+}
+
+.post-page-content > :first-child {
+    margin-top: 0;
 }
 
 .post-page-content h2,
 .post-page-content h3,
 .post-page-content h4 {
     color: #f3e7cf;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    scroll-margin-top: 90px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.65rem;
+    scroll-margin-top: 24px;
 }
 
 .post-page-content p,
 .post-page-content ul,
 .post-page-content ol {
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
 }
 
 .post-page-content a {
@@ -541,11 +545,21 @@ footer {
 
 .post-toc {
     position: sticky;
-    top: 88px;
+    top: 24px;
     align-self: start;
     justify-self: end;
     width: 100%;
-    max-width: 290px;
+    max-width: 300px;
+    margin-top: 0;
+}
+
+.post-toc-card,
+.post-toc-card.toon-panel {
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.95rem 1rem 1rem;
+    scrollbar-gutter: stable;
 }
 
 .post-toc-title {
