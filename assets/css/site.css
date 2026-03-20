@@ -143,3 +143,40 @@ footer {
 .about-panel p:last-child {
     margin-bottom: 0;
 }
+
+.rainbow-text {
+    display: inline-block;
+    letter-spacing: 0;
+}
+
+.rainbow-char {
+    display: inline-block;
+}
+
+.rainbow-0 { color: #32CD32; }
+.rainbow-1 { color: #FFD700; }
+.rainbow-2 { color: #FF69B4; }
+.rainbow-3 { color: #FF6347; }
+.rainbow-4 { color: #da810e; }
+.rainbow-5 { color: #FF69B4; }
+.rainbow-6 { color: #3df182; }
+.rainbow-7 { color: #87CEEB; }
+.rainbow-8 { color: #BA55D3; }
+
+.rainbow-inline-text {
+    display: inline;
+    background: linear-gradient(
+        90deg,
+        #32CD32 0%,
+        #FFD700 14%,
+        #FF69B4 28%,
+        #FF6347 42%,
+        #da810e 56%,
+        #3df182 70%,
+        #87CEEB 84%,
+        #BA55D3 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
