@@ -14,18 +14,20 @@ title: Home
     <title>Cyberjutsu</title>
 
     <style>
-        body,
-        html {
+        html,
+        body {
             min-height: 100%;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            background-color: #5F514E;
         }
 
         body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #5F514E;
             font-family: Arial, Helvetica, sans-serif;
         }
+
 
         header {
             text-align: center;
@@ -37,10 +39,9 @@ title: Home
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: clamp(16px, 2vw, 30px);
-            padding: 24px 16px 40px;
+            padding: 12px 16px 20px;
         }
+
 
         .banner-img {
             display: block;
@@ -51,13 +52,16 @@ title: Home
         }
 
         .top-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: clamp(12px, 2vw, 28px);
+            padding: 16px 16px 0;
             text-align: center;
-            padding: 12px 16px 4px;
         }
 
         .top-nav a {
-            display: inline-block;
-            margin: 0 12px;
             color: #f3e7cf;
             text-decoration: none;
             font-size: clamp(0.95rem, 0.8vw + 0.7rem, 1.15rem);
@@ -68,9 +72,11 @@ title: Home
             color: #FFD700;
         }
 
+
         .title {
             text-align: center;
-            margin-top: 4px;
+            margin-top: 10px;
+            flex: 0 0 auto;
         }
 
 
@@ -82,9 +88,15 @@ title: Home
             letter-spacing: 0;
         }
 
+
         .content {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            margin-top: 4px;
+            padding: 10px 0;
         }
 
         .ascii-art {
@@ -120,8 +132,8 @@ title: Home
 
         footer {
             text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
             padding: 18px 12px 24px;
+            margin-top: auto;
         }
     </style>
 </head>
@@ -192,10 +204,12 @@ title: Home
             "Trust But Verify",
             "Coffee > Sleep",
             "Hello Friend",
-            "pwned",
+            "PWNED",
             "Works On My Box",
             "Knock Knock Neo",
-            "Admin:Admin"
+            "admin:admin",
+            "user:user",
+            "Root and Scoot"
         ];
 
         function spaces(n) {
