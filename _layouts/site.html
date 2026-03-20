@@ -25,6 +25,10 @@
     {% if page.use_post_filter %}
     <script src="{{ '/assets/js/posts-filter.js' | relative_url }}"></script>
     {% endif %}
+
+    {% if page.layout == "post" or page.use_post_toc %}
+    <script src="{{ '/assets/js/post-toc.js' | relative_url }}"></script>
+    {% endif %}
 </body>
 
 </html>
