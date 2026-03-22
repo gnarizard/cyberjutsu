@@ -8,43 +8,6 @@ categories:
   - Cheatsheets
 ---
 
-
-## PROTOCOL REFERENCE
-
-|Protocol|Best For|Stealth|Notes|
-|---|---|---|---|
-|HTTP (Python)|Quick download|Low|Easiest|
-|FTP|Simple upload/download|Medium|Often allowed|
-|SMB|Windows environments|Medium|Very common|
-|SCP|Secure transfer|High|Requires SSH|
-|Netcat|Raw transfer|Medium|Works when others blocked|
-|Evil-WinRM|Windows shells|High|Built-in upload/download|
-
-
-## DECISION FLOW 
-
-If Linux victim:
-
-1. Try `wget`
-2. Try `curl`
-3. Try FTP
-4. Try SCP
-5. Try SMB
-6. Fall back to nc
-    
-
-If Windows victim:
-
-1. Try `iwr`
-2. Try `certutil`
-3. Try SMB
-4. Try FTP
-5. Use Evil-WinRM if available
-    
-
----
-
-
 ## Linux
 
 ### Download Operations
