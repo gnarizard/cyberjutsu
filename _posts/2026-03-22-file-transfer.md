@@ -8,6 +8,8 @@ categories:
   - Cheatsheets
 ---
 
+>Disclaimer: This guide is for educational purposes and only to be used on systems where explicit authorization has been granted
+
 ## Linux
 
 ### Download Operations
