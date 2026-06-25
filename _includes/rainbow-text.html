@@ -1,0 +1,13 @@
+<span class="{{ include.class | default: 'rainbow-text' }}">
+  {% assign chars = include.text | split: "" %}
+  {% for ch in chars %}
+    {% assign color_index = forloop.index0 | modulo: 9 %}
+    <span class="rainbow-char rainbow-{{ color_index }}">
+      {% if ch == " " %}
+        &nbsp;
+      {% else %}
+        {{ ch }}
+      {% endif %}
+    </span>
+  {% endfor %}
+</span>
