@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "File Transfer"
 date: 2026-03-22
 layout: post
@@ -6,7 +6,7 @@ permalink: /posts/file-transfer/
 excerpt: "A cheatsheet for moving files to and from target systems during an engagement. It covers a broad range of transfer methods across Linux and Windows."
 categories:
   - Cheatsheets
----
+--- -->
 
 >Disclaimer: This guide is for educational purposes and only to be used on systems where explicit authorization has been granted
 
